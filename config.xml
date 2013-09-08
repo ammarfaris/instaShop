@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.insta"
+        versionCode="11" 
+        version   = "0.1.1">
+		
+	<!-- For more information about using config.xml, see
+		https://build.phonegap.com/docs/config-xml -->
+
+    <!-- versionCode is optional and Android only -->
+    
+    <!-- define which version of phonegap to use, not required -->
+    <preference name="phonegap-version" value="2.9.0" />
+	
+	<!-- this app will have no device api access -->
+	<preference name="permissions" value="none"/>
+	
+	<!-- the default icon to be use, for BlackBerry must be less than 16kb -->
+	<icon src="icon.png" />
+
+	<!-- the default splash screen to use -->
+	<!-- iOS -->
+	<gap:splash src="splash.png" width="320" height="480" />
+	<gap:splash src="splash.png" width="640" height="960" />
+	<gap:splash src="splash.png" width="1024" height="768" />
+	<gap:splash src="splash.png" width="768" height="1024" />
+	<!-- Android -->
+	<gap:splash src="splash.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="splash.png" gap:platform="android" gap:density="xhdpi" />
+	<!-- BlackBerry -->
+	<gap:splash src="splash.png" gap:platform="blackberry" />
+	<!-- Windows Phone -->
+	<gap:splash src="splash.png" gap:platform="winphone" />
+
+    <name>Jobli</name>
+
+    <description>
+        Location-based Classified mobile platform has never been this easy!
+    </description>
+
+    <author href="https://dezeek.com" email="adlan@dezeek.com">
+        Dezeek Media
+    </author>
+
+</widget>

@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" > 
 	<title>Instashop - Interactive Mockup</title> 
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/jquerymobile.css" />
@@ -23,30 +23,79 @@
 
 	<div data-role="content" >	
 		<p>&nbsp;</p>
-		<h2 class="aligncenter">Login</h2>
+		<h2 class="aligncenter">Welcome back!</h2>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
-
-		<p><a href="#two" data-role="button" data-theme="b" class="fb">Login with Facebook</a></p>	
-		<p><a href="#two" data-role="button" data-theme="b" class="twit">Login with Twitter</a></p>	
+		<p class="aligncenter"><a href="#login" data-role="button" data-theme="b" class="login">Login </a></p>
+		<p><a href="#home" data-role="button" data-theme="b" class="fb">Login with Facebook</a></p>	
+		<p><a href="#home" data-role="button" data-theme="b" class="twit">Login with Twitter</a></p>	
 		<!--<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>-->
-		<p class="aligncenter">Create a new account</p>
+		<p class="aligncenter"><a href="#register" class="unreg"> Not registered yet?</a></p>
 	</div><!-- /content -->
 </div><!-- /page one -->
 
 
-<!-- Start of second page: #two -->
-<div data-role="page" id="two" data-theme="a">
-
-	<div data-role="header">
-		<h1>Settings</h1>
-	</div><!-- /header -->
+<!-- Start of second page: #login -->
+<div data-role="page" id="login" data-theme="b">
+		<div data-role="header" data-theme="b">
+		<h1>Login</h1>
+		</div><!-- /header -->
 
 	<div data-role="content">	
-		<label for="slider-fill-mini">How far are you willing to go?</label>
-<input type="range" name="slider-fill-mini" id="slider-fill-mini" value="40" min="0" max="100" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="d">
+		<ul data-role="listview">
+		<li><label>Email address:</label><input type="text" name="text-basic" id="text-basic" value=""></li>
+		<li><label for="password">Password:</label><input type="password" name="password" id="password" value="" autocomplete="off"></li>
+        <li></li>
+           
+
+        </ul>
+		
+		<p><a href="#home" data-role="button" data-theme="b">Log in!</a></p>	
+		
+	</div><!-- /content -->
+	
+</div><!-- /page login -->
+
+<!-- Start of second page: #register -->
+<div data-role="page" id="register" data-theme="b">
+		<div data-role="header" data-theme="b">
+		<h1>Create new account</h1>
+		</div><!-- /header -->
+
+	<div data-role="content">	
+		<ul data-role="listview">
+		<li><label>Email address:</label><input type="text" name="text-basic" id="text-basic" value=""></li>
+		<li><label for="password">Password:</label><input type="password" name="password" id="password" value="" autocomplete="off"></li>
+        <li></li>
+           
+
+        </ul>
+		
 		<p><a href="#home" data-role="button" data-theme="b">Save</a></p>	
 		
+	</div><!-- /content -->
+	
+</div><!-- /page register -->
+
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="b">
+	<div data-role="content">	
+		<ul data-role="listview">
+            <li data-role="list-divider">Settings</li>
+            <li><label for="select-choice-1" class="select">Unit:</label>
+            	<select name="select-choice-1" id="select-choice-1">
+    <option value="standard">Kilometer</option>
+    <option value="rush">Miles</option>
+</select>
+            </li>
+            <li>
+<label for="slider-fill-mini">How far are you willing to go? (kilometres)</label>
+<input type="range" name="slider-fill-mini" id="slider-fill-mini" value="40" min="0" max="100" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="d">
+            </li>
+       		<li><input type="button" value="Create account" data-icon="delete" data-theme="b"></li>
+
+        </ul>		
 	</div><!-- /content -->
 	
 </div><!-- /page two -->
@@ -56,27 +105,133 @@
 <div data-role='panel' id='mypanel' data-theme='b'>
 <ul data-role="listview">
             <li data-role="list-divider">Menu</li>
-            <li data-role="list-divider">Saved items</li>
-            <li data-icon="coffee"><a href="#">Settings</a></li>
-            <li data-icon="beer"><a href="#">Logout</a></li>
+            <li data-icon="search"><a href="#search">Search</a></li>
+            <li data-icon="bookmark"><a href="#">Saved items</a></li>
+            <li data-icon="gear"><a href="#two">Settings</a></li>
+            <li data-icon="signout"><a href="#one">Logout</a></li>
         </ul>
 </div>
 	<div data-role="header" data-theme="b">
 		<a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='notext' data-inline='true'>Open panel</a>
 		<h1>Home</h1>
-		<a href="#" data-role="button" data-inline="true" data-theme="b">Sell</a>
+		<a href="#entry" data-role="button" data-inline="true" data-theme="b" data-icon='camera'>Sell</a>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<div class="ftimg"><img src="car.jpg"><div class="title"><h3>Accord 2013</h3></div>
-		<div class="meta">Location</div></div>
-		<div class="ftimg"><img src="car.jpg"><div class="title"><h3>Accord 2014</h3></div></div>
+		<div class="image"><img src="car.jpg"><div class="title"><h3>Honda Accord Black (M) Like New 2013</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 500 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		<div class="image"><img src="coconut.jpg"><div class="title"><h3>Buah Kelapa Muda yang lazat</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 1500 meters away</div>
+				<div class="price">RM1.00</div>
+			</div>
+	</div>
+	<div class="image"><img src="car.jpg"><div class="title"><h3>Accord 2014</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 2000 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
 		
 	</div><!-- /content -->
 	
-</div><!-- /page home -->
+</div><!-- /page camera -->
+<div data-role="page" id="camera">
+	<div data-role="header" data-theme="b">
+		<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
+		<h1>Take a photo</h1>
+		
+	</div><!-- /header -->
+	<div data-role="content" >	
+		<div class="cameragrid">
 
-<!-- Start of third page: #popup -->
+		</div>
+ <a href="#entry" data-role="button" data-icon='camera' class="snapa">Snap! </a>
+	</div><!-- /content -->
+</div><!-- /page camera -->
+<!-- Start of third page: #search -->
+<div data-role="page" id="search">
+
+	<div data-role="header" data-theme="b">
+		<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
+		<h1>Search</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="b">
+<ul data-role="listview">
+            <li><input type="text" name="text-basic" id="text-basic" value="" placeholder="Any products name"></li>
+            <li><a href="#home" data-role="button">Submit</a></li>
+        </ul>
+	</div><!-- /content -->
+	
+</div><!-- /page search -->
+<!-- Start of third page: #entry info -->
+<div data-role="page" id="entry">
+
+	<div data-role="header" data-theme="b">
+		<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
+		<h1>Product details</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="b">
+<ul data-role="listview">
+			<li>
+				<input type="file" capture="camera" accept="image/*" id="takePictureField" name="Snap">
+        
+		<img id="yourimage">
+ 
+		<div id="swatches">
+			<div id="swatch0" class="swatch"></div>
+		</div>
+		
+    <script>
+	var desiredWidth;
+ 
+    $(document).ready(function() {
+        console.log('onReady');
+		$("#takePictureField").on("change",gotPic);
+		$("#yourimage").load(getSwatches);
+		desiredWidth = window.innerWidth;
+        
+        if(!("url" in window) && ("webkitURL" in window)) {
+            window.URL = window.webkitURL;   
+        }
+		
+	});
+ 
+	function getSwatches(){
+		var colorArr = createPalette($("#yourimage"), 5);
+		for (var i = 0; i < Math.min(5, colorArr.length); i++) {
+			$("#swatch"+i).css("background-color","rgb("+colorArr[i][0]+","+colorArr[i][1]+","+colorArr[i][2]+")");
+			console.log($("#swatch"+i).css("background-color"));
+		}
+	}	
+	
+    //Credit: https://www.youtube.com/watch?v=EPYnGFEcis4&feature=youtube_gdata_player
+	function gotPic(event) {
+        if(event.target.files.length == 1 && 
+           event.target.files[0].type.indexOf("image/") == 0) {
+            $("#yourimage").attr("src",URL.createObjectURL(event.target.files[0]));
+        }
+	}
+	
+	
+        
+    </script>    
+			</li>
+            <li><label>Product name:</label><input type="text" name="text-basic" id="text-basic" value=""></li>
+            <li><label for="number-pattern">Price:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value=""></li>
+            <li><label for="number-pattern">Stock available:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="" placeholder="Leave blank "></li>
+            <li><label for="textarea">Description:</label><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></li>
+            <li><a href="#home" data-role="button">Submit</a></li>
+        </ul>
+	</div><!-- /content -->
+	
+</div><!-- /page product entry-->
 <div data-role="page" id="popup">
 
 	<div data-role="header" data-theme="e">

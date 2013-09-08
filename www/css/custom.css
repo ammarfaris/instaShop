@@ -22,9 +22,10 @@ text-align: left;}
 .meta {margin:5px 0;}
 .location {font-size:.8em; text-align: left; width:45%; display: inline-block; float:left; line-height: 30px;}
 .location i{font-size:2em; vertical-align: middle; color:#A7A9AC;}
-.price {background:#CB2026; color:#fff; text-align: right; width: 40%; float: right; padding:5px 10px 5px 0; position: relative;}
+.price {background:#CB2026; color:#fff; text-align: right; width: 45%; float: right; padding:5px 10px 5px 0; position: relative;}
 .price:before {display:block; background:#fff; content:""; position:absolute; border: 1em solid #CB2026; border-left-color: transparent; top:0;}
 #home .ui-btn-up-b .ui-btn-inner, .ui-btn-up-b .ui-btn-text .ui-link-inherit {color:rgba(255,255,255,.6);}
+#details .ui-btn-up-b .ui-btn-inner, .ui-btn-up-b .ui-btn-text .ui-link-inherit {color:rgba(255,255,255,.6);}
 .snap {  position:absolute;
     width:200px;
     height:80px;
@@ -37,3 +38,23 @@ text-align: left;}
     .snapa {background:#25aae1; color:#fff;}
 .cameragrid {background: #000; height:400px;}
 .login {background:#ddd;}
+
+.error {
+    border: 1px solid red;
+    background: #FDEFF0;
+    padding: 20px; margin: 10px;
+}
+
+.errorReg{
+    border: 1px solid red;
+    background: #FDEFF0;
+    padding: 20px;
+}
+
+.successReg{
+    border: 1px solid grey;
+    background: green;
+    padding: 20px;
+}
+
+.ctct {background:#8AC640; margin:10px; color:#fff;}

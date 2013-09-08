@@ -81,6 +81,9 @@
 		<ul data-role="listview">
 		<li><label>Email address:</label><input type="text" name="newEmail" id="newEmail" value=""></li>
 		<li><label for="password">Password:</label><input type="password" name="newPwd" id="newPwd" value="" autocomplete="off"></li>
+		<li><label>Phone number:</label> <input type="text" value="+6013 356 0442"> </li>
+		<li><label>Location:</label><br/> <i class='icon-map-marker'></i> Near Bukit Bintang, Kuala Lumpur <br/>
+			<small>You can change your location later under settings option</small></li>
         <li><input type="button" onclick="checkRegister(this.form)" value="Register!"/></li>
            
 
@@ -165,7 +168,7 @@
 		
 	</div><!-- /content -->
 	
-</div><!-- /page camera -->
+</div><!-- /page home -->
 <div data-role="page" id="camera">
 	<div data-role="header" data-theme="b">
 		<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
@@ -290,7 +293,7 @@
             <li><label for="number-pattern">Price:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value=""></li>
             <li><label for="number-pattern">Stock available:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="" placeholder="Leave blank "></li>
             <li><label for="textarea">Description:</label><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></li>
-            <li><a href="#home" data-role="button">Submit</a></li>
+            <li><a href="#homeadd" data-role="button">Submit</a></li>
         </ul>
 	</div><!-- /content -->
 	
@@ -316,10 +319,58 @@
             <li><strong>Stock availability:</strong> Yes </li>
         </ul>
             <a data-role='button' data-icon='phone' class="ctct" href="tel://1-555-555-5555">Call</a>
-            <a data-role='button' data-icon='envelope' class="ctct">Send message</a>
+            <a data-role='button' data-icon='envelope' class="ctct" href="sms://1-555-555-5555">Send message</a>
 	</div><!-- /content -->
 	
 </div><!-- /page details -->
+
+<!-- Start of second page: #homeadded -->
+<div data-role="page" id="homeadd" >
+<div data-role='panel' id='mypanel' data-theme='b'>
+<ul data-role="listview">
+            <li data-role="list-divider">Menu</li>
+            <li data-icon="search"><a href="#search">Search</a></li>
+            <li data-icon="bookmark"><a href="#">Saved items</a></li>
+            <li data-icon="gear"><a href="#two">Settings</a></li>
+            <li data-icon="signout"><a href="#one">Logout</a></li>
+        </ul>
+</div>
+	<div data-role="header" data-theme="b">
+		<a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='notext' data-inline='true'>Open panel</a>
+		<h1>Home</h1>
+		<a href="#entry" data-role="button" data-inline="true" data-theme="b" data-icon='camera'>Sell</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div class="image"><a href="#details"><img src="projector.jpg"></a><div class="title"><a href=""><h3>Product name</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 100 meters away</div>
+				<div class="price">N/A</div>
+			</div>
+	</div>
+
+		<div class="image"><a href="#details"><img src="car.jpg"></a><div class="title"><a href=""><h3>Honda Accord Black (M) Like New 2013</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 500 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		<div class="image"><img src="coconut.jpg"><div class="title"><h3>Buah Kelapa Muda yang lazat</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 1500 meters away</div>
+				<div class="price">RM1.00</div>
+			</div>
+	</div>
+	<div class="image"><img src="car.jpg"><div class="title"><h3>Accord 2014</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 2000 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		
+	</div><!-- /content -->
+	
+</div><!-- /page homeadded -->
 
 <div data-role="page" id="popup">
 

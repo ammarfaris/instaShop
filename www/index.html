@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" > 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Instashop - Interactive Mockup</title> 
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/jquerymobile.css" />
@@ -30,7 +31,7 @@
 		<h2 class="aligncenter">Welcome back!</h2>
 		<p>&nbsp;</p>
 		<p>&nbsp;</p>
-		<p class="aligncenter"><a href="#login" namedata-role="button" data-theme="b" class="login">Login </a></p>
+		<p class="aligncenter"><a href="#login" data-role="button" data-theme="b" class="login">Login </a></p>
 		<p><a href="#home" data-role="button" data-theme="b" class="fb">Login with Facebook</a></p>	
 		<p><a href="#home" data-role="button" data-theme="b" class="twit">Login with Twitter</a></p>	
 		<!--<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p>-->
@@ -43,6 +44,7 @@
 <div data-role="page" id="login" data-theme="b">
 		<div data-role="header" data-theme="b">
 		<h1>Login</h1>
+		<a href='#one' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
 		</div><!-- /header -->
 
 	<div data-role="content">	
@@ -53,19 +55,11 @@
 		<ul data-role="listview">
 		<li><label>Email address:</label><input type="text" name="userid" id="userid" value=""></li>
 		<li><label for="password">Password:</label><input type="password" name="pswrd" id="pswrd" value="" autocomplete="off"></li>
-        <li></li>
-         
-		
-
-        </ul>
-		
-		<p><input type="button" onclick="checkLogin(this.form)" value="Login!"/></p>
-		<!-- <p><a href="#home" data-role="button" data-theme="b">Log in!</a></p>-->
-
-		<div style="display:none" class="error">
+        <li><input type="button" onclick="checkLogin(this.form)" value="Login!"/></li>
+         <div style="display:none" class="error">
 		 Sorry, wrong credentials :( . Please try again.
 		</div>
-			
+		</ul>
 		</form>
 	
 	
@@ -77,6 +71,7 @@
 <div data-role="page" id="register" data-theme="b">
 		<div data-role="header" data-theme="b">
 		<h1>Create new account</h1>
+		<a href='#one' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
 		</div><!-- /header -->
 
 	<div data-role="content">	
@@ -86,12 +81,15 @@
 		<ul data-role="listview">
 		<li><label>Email address:</label><input type="text" name="newEmail" id="newEmail" value=""></li>
 		<li><label for="password">Password:</label><input type="password" name="newPwd" id="newPwd" value="" autocomplete="off"></li>
-        <li></li>
+		<li><label>Phone number:</label> <input type="text" value="+6013 356 0442"> </li>
+		<li><label>Location:</label><br/> <i class='icon-map-marker'></i> Near Bukit Bintang, Kuala Lumpur <br/>
+			<small>You can change your location later under settings option</small></li>
+        <li><input type="button" onclick="checkRegister(this.form)" value="Register!"/></li>
            
 
         </ul>
 		
-		<p><input type="button" onclick="checkRegister(this.form)" value="Register!"/></p>
+		<p></p>
 
 		<div style="display:none" class="successReg">	
 		 Yeay! Registration was successful. Please check your email for verification. 
@@ -124,7 +122,7 @@
 <label for="slider-fill-mini">How far are you willing to go? (kilometres)</label>
 <input type="range" name="slider-fill-mini" id="slider-fill-mini" value="40" min="0" max="100" data-mini="true" data-highlight="true" data-theme="b" data-track-theme="d">
             </li>
-       		<li><input type="button" value="Create account" data-icon="delete" data-theme="b"></li>
+       		<li><input type="button" value="Save" data-theme="b"></li>
 
         </ul>		
 	</div><!-- /content -->
@@ -149,7 +147,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<div class="image"><img src="car.jpg"><div class="title"><h3>Honda Accord Black (M) Like New 2013</h3></div>
+		<div class="image"><a href="#details"><img src="car.jpg"></a><div class="title"><a href=""><h3>Honda Accord Black (M) Like New 2013</h3></div>
 			<div class="meta">
 				<div class="location"><i class='icon-map-marker'></i> 500 meters away</div>
 				<div class="price">RM121,000.00</div>
@@ -170,7 +168,7 @@
 		
 	</div><!-- /content -->
 	
-</div><!-- /page camera -->
+</div><!-- /page home -->
 <div data-role="page" id="camera">
 	<div data-role="header" data-theme="b">
 		<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
@@ -295,11 +293,85 @@
             <li><label for="number-pattern">Price:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value=""></li>
             <li><label for="number-pattern">Stock available:</label><input type="number" name="number" pattern="[0-9]*" id="number-pattern" value="" placeholder="Leave blank "></li>
             <li><label for="textarea">Description:</label><textarea cols="40" rows="8" name="textarea" id="textarea"></textarea></li>
-            <li><a href="#home" data-role="button">Submit</a></li>
+            <li><a href="#homeadd" data-role="button">Submit</a></li>
         </ul>
 	</div><!-- /content -->
 	
 </div><!-- /page product entry-->
+
+<!-- Start of second page: #details -->
+<div data-role="page" id="details" >
+	<div data-role="header" data-theme="b">
+				<h1>Product Details</h1>
+				<a href='#home' data-role='button' data-direction="reverse" data-icon='angle-left' data-iconpos='notext' data-inline='true'>Back</a>
+		</div><!-- /header -->
+
+	<div data-role="content">	
+		<div class="image"><img src="car.jpg"><div class="title"><h3>Honda Accord Black (M) Like New 2013</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 500 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		<ul data-role="listview">
+            <li data-role="list-divider">Description</li>
+            <li>I'm selling something. Please let me know if you want it! While stock last.</li>
+            <li><strong>Stock availability:</strong> Yes </li>
+        </ul>
+            <a data-role='button' data-icon='phone' class="ctct" href="tel://1-555-555-5555">Call</a>
+            <a data-role='button' data-icon='envelope' class="ctct" href="sms://1-555-555-5555">Send message</a>
+	</div><!-- /content -->
+	
+</div><!-- /page details -->
+
+<!-- Start of second page: #homeadded -->
+<div data-role="page" id="homeadd" >
+<div data-role='panel' id='mypanel' data-theme='b'>
+<ul data-role="listview">
+            <li data-role="list-divider">Menu</li>
+            <li data-icon="search"><a href="#search">Search</a></li>
+            <li data-icon="bookmark"><a href="#">Saved items</a></li>
+            <li data-icon="gear"><a href="#two">Settings</a></li>
+            <li data-icon="signout"><a href="#one">Logout</a></li>
+        </ul>
+</div>
+	<div data-role="header" data-theme="b">
+		<a href='#mypanel' data-role='button' data-icon='tasks' data-iconpos='notext' data-inline='true'>Open panel</a>
+		<h1>Home</h1>
+		<a href="#entry" data-role="button" data-inline="true" data-theme="b" data-icon='camera'>Sell</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<div class="image"><a href="#details"><img src="projector.jpg"></a><div class="title"><a href=""><h3>Product name</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 100 meters away</div>
+				<div class="price">N/A</div>
+			</div>
+	</div>
+
+		<div class="image"><a href="#details"><img src="car.jpg"></a><div class="title"><a href=""><h3>Honda Accord Black (M) Like New 2013</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 500 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		<div class="image"><img src="coconut.jpg"><div class="title"><h3>Buah Kelapa Muda yang lazat</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 1500 meters away</div>
+				<div class="price">RM1.00</div>
+			</div>
+	</div>
+	<div class="image"><img src="car.jpg"><div class="title"><h3>Accord 2014</h3></div>
+			<div class="meta">
+				<div class="location"><i class='icon-map-marker'></i> 2000 meters away</div>
+				<div class="price">RM121,000.00</div>
+			</div>
+	</div>
+		
+	</div><!-- /content -->
+	
+</div><!-- /page homeadded -->
+
 <div data-role="page" id="popup">
 
 	<div data-role="header" data-theme="e">
